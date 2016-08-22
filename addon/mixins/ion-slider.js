@@ -33,7 +33,7 @@ const ionProperties = {
 
     grid               : false,
     grid_margin        : true,
-    grid_num           : 4,
+    grid_num           : 20,
     grid_snap          : false,
     hide_min_max       : false,
     hide_from_to       : false,
