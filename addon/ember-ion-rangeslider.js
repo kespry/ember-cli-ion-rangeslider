@@ -22,7 +22,7 @@ export default Component.extend(IonSliderMixin, {
 
   _startObserving() {
     let options = this.get('ionReadOnlyOptions');
-    for (const optName in options) {
+    for (let optName in options) {
       if (options.hasOwnProperty(optName)) {
         addObserver(this, optName, this, '_readOnlyPropertiesChanged');
       }
@@ -31,7 +31,7 @@ export default Component.extend(IonSliderMixin, {
 
   _stopObserving() {
     let options = this.get('ionReadOnlyOptions');
-    for (const optName in options) {
+    for (let optName in options) {
       if (options.hasOwnProperty(optName)) {
         removeObserver(this, optName, this, '_readOnlyPropertiesChanged');
       }

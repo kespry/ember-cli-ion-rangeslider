@@ -49,7 +49,7 @@ const ionProperties = {
 export default Mixin.create({
   ionReadOnlyOptions: computed(function() {
     let ionOptions = {};
-    for (const pName in ionProperties){
+    for (let pName in ionProperties){
       ionOptions[pName] = this.getWithDefault(pName, ionProperties[pName]);
     }
     return ionOptions;
