@@ -50,17 +50,15 @@ export default Component.extend(IonSliderMixin, {
     const options = this.get('sliderOptions');
     this.$().ionRangeSlider(options);
     this._slider = this.$().data('ionRangeSlider');
-    console.log($(".irs > .irs"))
     this.insertWrapper();
   },
 
   insertWrapper() {
-    var $labelWrapper = this.$("<span>");
+    var $labelWrapper = $("<span>");
     $labelWrapper.addClass("irs-single-wrapper");
-    var $singleLabel = this.$(".irs-single");
-    console.log($singleLabel);
+    var $singleLabel = $(".irs > .irs .irs-single");
     $labelWrapper.append($singleLabel);
-    this.$(".irs > .irs").append($labelWrapper);
+    $(".irs > .irs").append($labelWrapper);
   },
 
   willDestroyElement(){
