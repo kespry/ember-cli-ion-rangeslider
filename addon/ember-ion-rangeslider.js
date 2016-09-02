@@ -50,6 +50,7 @@ export default Component.extend(IonSliderMixin, {
     const options = this.get('sliderOptions');
     this.$().ionRangeSlider(options);
     this._slider = this.$().data('ionRangeSlider');
+    console.log($(".irs > .irs"))
     this.insertWrapper();
   },
 
