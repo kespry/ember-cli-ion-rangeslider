@@ -55,10 +55,11 @@ export default Component.extend(IonSliderMixin, {
 
   insertWrapper() {
     var $labelWrapper = this.$("<span>");
-    $labelWrapper.addClass("date-wrapper");
+    $labelWrapper.addClass("irs-single-wrapper");
     var $singleLabel = this.$(".irs-single");
+    console.log($singleLabel);
     $labelWrapper.append($singleLabel);
-    $(".irs > .irs").append($labelWrapper);
+    this.$(".irs > .irs").append($labelWrapper);
   },
 
   willDestroyElement(){
