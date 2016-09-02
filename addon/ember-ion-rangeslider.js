@@ -50,6 +50,15 @@ export default Component.extend(IonSliderMixin, {
     const options = this.get('sliderOptions');
     this.$().ionRangeSlider(options);
     this._slider = this.$().data('ionRangeSlider');
+    this.insertWrapper();
+  },
+
+  insertWrapper() {
+    var $labelWrapper = this.$("<span>");
+    $labelWrapper.addClass("date-wrapper");
+    var $singleLabel = this.$(".irs-single");
+    $labelWrapper.append($singleLabel);
+    $(".irs > .irs").append($labelWrapper);
   },
 
   willDestroyElement(){
